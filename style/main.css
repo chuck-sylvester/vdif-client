@@ -1,0 +1,103 @@
+html,
+body {
+  font-family: sans-serif;
+  background-color: #f5efe7;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  line-height: 80%;
+}
+
+header {
+  background-color: #213555;
+  padding: 0.5em 3em;
+}
+
+header h1 {
+  color: white;
+  font-size: 18pt;
+  display: inline-block;
+}
+
+header span {
+  color: white;
+  float: right;
+  padding: 16px 16px 0 0;
+}
+
+header span a {
+  color: lightgoldenrodyellow;
+  text-decoration: none;
+}
+
+header span a:visited {
+  color: lightgoldenrodyellow;
+}
+
+header span a:hover {
+  color: goldenrod;
+}
+
+main {
+  margin: 0.5em 3em 0.5em 3em;
+}
+
+main h2 {
+  font-size: 14pt;
+  /* margin: 1.2em 0 .9em 0; */
+}
+
+table {
+  border-collapse: collapse;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  margin: 20px 0 20px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+tr {
+  background-color: #eeeeee;
+}
+
+tr:nth-child(even) {
+  background-color: #d8d8d8;
+}
+
+td {
+  padding: 4px 10px 4px 10px;
+}
+
+.get-button {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #213555;
+  color: white;
+}
+
+.get-button:hover {
+  background-color: #4f709c;
+}
+
+.button {
+  padding: 2px 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button-active :hover {
+  background-color: azure;
+}
+
+.get-response {
+  line-height: 125%;
+  white-space: break-spaces;
+}
+
+.footer-text {
+  margin: 1em 3em 0.75em 3em;
+  padding: 12px;
+  font-size: 14px;
+  color: rebeccapurple;
+}

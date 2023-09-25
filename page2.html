@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VDIF API - 2</title>
+    <link rel="stylesheet" href="style/main.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Trying out the VDIF API Gateway</h1>
+      <span>
+        <a href="index.html"><button class="button button-active">Page 1</button></a>
+        &nbsp;
+        <a href="page2.html"><button class="button">Page 2</button></a>
+        &nbsp;&nbsp;&nbsp;&nbsp; DevPortal:
+        <a target="_blank" href="https://vac10apphsh222.va.gov:8446/">https://vac10apphsh222.va.gov:8446/</a>
+      </span>
+    </header>
+
+    <main>
+      <br />
+
+      <!-- ----- GET Capabilities ----- -->
+      <h2>VDIF API Capabilities</h2>
+      <button id="get-metadata-default" class="get-button"><strong>GET</strong>&nbsp; /metadata</button>
+      <button id="get-metadata-report" class="get-button">Sample Report</button>
+      <button id="clear-metadata" class="get-button">Clear</button>
+      <p id="get-metadata-response" class="get-response"><br /></p>
+
+      <!-- ----- GET Appointment ----- -->
+      <h2>Appointment</h2>
+      <button id="get-appointment-default" class="get-button"><strong>GET</strong>&nbsp; /Appointment</button>
+      <button id="get-appointment-patient" class="get-button">
+        <strong>GET</strong>&nbsp; /Appointment?patient=100000002
+      </button>
+      <button id="get-appointment-date" class="get-button">
+        <strong>GET</strong>&nbsp; /Appointment?date=2015-10-13
+      </button>
+      <button id="report-appointment" class="get-button">Sample Report</button>
+      <button id="clear-appointment" class="get-button">Clear</button>
+      <p id="get-appointment-response" class="get-response"><br /></p>
+
+      <!-- ----- GET Encounter ----- -->
+      <h2>Encounter</h2>
+      <button id="get-encounter-default" class="get-button"><strong>GET</strong>&nbsp; /Encounter</button>
+      <button id="get-encounter-date" class="get-button">
+        <strong>GET</strong>&nbsp; /Encounter?date=2022-01-20
+      </button>
+      <button id="report-encounter" class="get-button">Sample Report</button>
+      <button id="clear-encounter" class="get-button">Clear</button>
+      <p id="get-encounter-response" class="get-response"><br /></p>
+
+      <!-- ----- GET Medication ----- -->
+      <h2>Medication</h2>
+      <button id="get-medication-default" class="get-button"><strong>GET</strong>&nbsp; /Medication</button>
+      <button id="get-medication-code" class="get-button">
+        <strong>GET</strong>&nbsp; /Medication?code=3259
+      </button>
+      <button id="report-medication" class="get-button">Sample Report</button>
+      <button id="clear-medication" class="get-button">Clear</button>
+      <p id="get-medication-response" class="get-response"><br /></p>
+
+      <!-- ----- GET Patient ----- -->
+      <h2>Patient</h2>
+      <button id="get-patient-default" class="get-button"><strong>GET</strong>&nbsp; /Patient</button>
+      <button id="report-patient" class="get-button">Sample Report</button>
+      <button id="clear-patient" class="get-button">Clear</button>
+      <p id="get-patient-response" class="get-response"><br /></p>
+    </main>
+
+    <footer>
+      <!-- I started thinking about how to use this area, but no time to work on it yet... -->
+      <p id="footer-text" class="footer-text"><br /></p>
+    </footer>
+
+    <!--
+    <script src="script/env.js"></script>
+    -->
+    <script src="script/main.js"></script>
+  </body>
+</html>
