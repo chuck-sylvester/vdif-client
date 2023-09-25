@@ -1,7 +1,6 @@
 /*
     Basic JavaScript code to run HL7 FHIR queries
-    Includes default version of query and a version with a patient value.
-    It seems like there is only a single sample patient on the test server (100000002)
+    Includes default version of query and a version with a patient value
 */
 
 // Event listeners to respond to button clicks
@@ -39,7 +38,8 @@ function getMetadataReport() {
 
 function getMetadata(qualifier) {
   let data = null;
-  let req = 'https://vac10apphsh222.va.gov/csp/healthshare/hsods/fhir/r4/metadata';
+  // let req = 'https://vac10apphsh222.va.gov/csp/healthshare/hsods/fhir/r4/metadata';
+  let req = 'https://vac10apphsh222.va.gov:8443/fhir/r4/metadata';
 
   // create XHR object that will interact with VDIF server
   const xhr = new XMLHttpRequest();
@@ -60,6 +60,7 @@ function getMetadata(qualifier) {
         const resourceType = jsonValue.resourceType;
         const id = jsonValue.id;
         const lastUpdated = jsonValue.meta.lastUpdated;
+        const url = jsonValue.url;
         const fhirVersion = jsonValue.fhirVersion;
         const format = jsonValue.format;
 
@@ -98,9 +99,10 @@ function getMetadata(qualifier) {
           `<tr><td>Resource Type</td><td>${resourceType}</td></tr>` +
           `<tr><td>ID</td><td>${id}</td></tr>` +
           `<tr><td>Last Updated</td><td>${lastUpdated}</td></tr>` +
+          `<tr><td>URL</td><td>${url}</td></tr>` +
           `<tr><td>FHIR Version</td><td>${fhirVersion}</td></tr>` +
           `<tr><td>Format</td><td>${format}</td></tr>` +
-          `<tr><td>Resource Count</td><td>${sizeOfRestResources}</td></tr>` +
+          `<tr><td>Resource Count (calculated)</td><td>${sizeOfRestResources}</td></tr>` +
           `<tr><td>Resource List</td><td>${listOfResources}</td></tr>` +
           `<tr><td>Appointment Search List</td><td>${listOfResourcesAppointment}</td></tr>` +
           `<tr><td>Encounter Search List</td><td>${listOfResourcesEncounter}</td></tr>` +
